@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include<sys/wait.h> 
+#include<unistd.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <errno.h>
+#include <time.h>
+
+
+
+int main(){
+  srand(time(0));
+  printf("Parent function %d\n", getpid());
+  int pid_a;
+  int pid_b;
+  int stat;
+
+
+  if((pida=fork())){
+    int rand_a=rand()%15+5;
+    printf("Child a will now go to sleep for %i seconds, pid %i \n",x, getpid())
+;
+    sleep(rand_a);
+    printf("Child a has now finished sleeping for %i seconds, pid %i \n",x, getpid());
+    return rand_a;
+  }
+  else{
+    if(pidb=fork()){
+      int rand_b=rand()%15+5;
+      printf("Child b will now go to sleep for %i seconds, pid %i \n",y, getpid());
+      sleep(rand_b);
+      printf("Child b has now finished sleeping for %i seconds, pid %i \n",y, getpid());
+      return rand_b;
+    }
+    wait(&stat);
+    if( WEXITSTATUS(stat)==x){
+      printf("Child %i is victorious he slept for %i seconds, I am now a father of only one\n",pida, WEXITSTATUS(stat));
+    }
+    else{
+      printf("Child %i is victorious he slept for %i seconds, I am now a father of only one\n", pidb,WEXITSTATUS(stat));
+
+    }
+    return 0;
+  }
+  
+  return 0;
+}

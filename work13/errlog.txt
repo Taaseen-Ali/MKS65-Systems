@@ -1,0 +1,1 @@
+Exit due to SIGINT

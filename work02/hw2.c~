@@ -1,0 +1,7 @@
+int main(){
+  unsigned int num = 45;
+  char * p_num = &num;
+  printf("%x", num);
+  printf("hhx", * p_num);
+  return 0;
+}

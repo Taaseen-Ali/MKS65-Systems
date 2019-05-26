@@ -1,0 +1,2 @@
+void init_table(struct node * table[27]);
+void insert(struct node * table[27], char _artist[], char _song[]);
