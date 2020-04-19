@@ -1,2 +1,2 @@
 # MKS65-Systems
-Repository containing all of the work for Systems Level Programming course written in C.
+Repository containing all of the work for Systems Level Programming written in C.
